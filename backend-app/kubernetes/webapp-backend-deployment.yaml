@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: webapp-backend
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+     app: webapp-backend
+ template:
+   metadata:
+     labels:
+       app: webapp-backend
+   spec:
+     containers:
+     - name: webapp-backend-container
+       image: frederikkrogh/webapp-backend:latest
+       ports:
+       - containerPort: 8080
