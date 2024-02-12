@@ -18,3 +18,6 @@ docker buildx build --platform linux/amd64 -t frederikkrogh/webapp-frontend:amd6
 
 docker push frederikkrogh/webapp-frontend:amd64 
 docker push frederikkrogh/webapp-backend:amd64 
+
+# Deployment
+Connect to VM: ssh -i ~/Gemmekassen/fk-deployment_key.pem azureuser@20.240.236.19
